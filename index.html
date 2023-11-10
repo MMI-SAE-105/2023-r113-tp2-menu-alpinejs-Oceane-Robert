@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen: false}">
+<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,12 +10,36 @@
     <!-- https://emmet.io/ -->
     <!-- header>h1{Test de menu} -->
     <header>
-      <head>
-      <button aria-controls="mainNav">menu</button>
+      <button 
+      aria-controls="mainNav" 
+      @click="menuIsOpen = ! menuIsOpen"
+      class="header_menuBtn"
+      >
+      menu
+    </button>
       <h1>Test de menu</h1>
       <script defer src="https://unpkg.com/alpinejs"></script>
-      </head>
-      <nav id="mainNav" x-show="menuIsOpen">
+      <style>
+        .menu {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width:100v;
+          height: 20vh;
+          background: #fff;
+          display: grid;
+          place-content: center;
+        }
+        .header_menuBtn{
+          position: relative;
+          z-index: 10;
+        }
+        .noscroll,
+        .noscroll body{
+          overflow: hidden;
+        }
+      </style>
+      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
         <ul>
           <li href="#">item 1</li>
           <li href="#">item 2</li>
@@ -31,5 +55,17 @@
       nemo aliquid pariatur quam voluptates animi laudantium, aperiam
       consectetur nobis enim.
     </p>
+    <dl>
+      <dt>Lorem.</dt>
+      <dd>Lorem ipsum dolor sit amet.</dd>
+    </dl>
+    <dl>
+      <dt>Ipsum.</dt>
+      <dd>Magni temporibus voluptate excepturi necessitatibus!</dd>
+    </dl>
+    <dl>
+      <dt>Facere.</dt>
+      <dd>Perspiciatis in harum id sit?</dd>
+    </dl>
   </body>
 </html>
