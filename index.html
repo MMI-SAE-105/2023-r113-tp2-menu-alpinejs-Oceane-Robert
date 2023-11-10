@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" x-data="{menuIsOpen: false}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,7 +10,18 @@
     <!-- https://emmet.io/ -->
     <!-- header>h1{Test de menu} -->
     <header>
+      <head>
+      <button aria-controls="mainNav">menu</button>
       <h1>Test de menu</h1>
+      <script defer src="https://unpkg.com/alpinejs"></script>
+      </head>
+      <nav id="mainNav" x-show="menuIsOpen">
+        <ul>
+          <li href="#">item 1</li>
+          <li href="#">item 2</li>
+          <li href="#">item 3</li>
+        </ul>
+      </nav>
     </header>
     <!-- h2>lorem2^p>lorem -->
     <h2>Lorem, ipsum.</h2>
