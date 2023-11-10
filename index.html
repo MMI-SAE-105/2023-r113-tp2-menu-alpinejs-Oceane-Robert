@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+<html lang="fr" x-data="{
+    menuIsOpen: false, 
+    dd1 : false,
+    dd2 : false,
+    dd3 : false,
+  }" 
+  :class="{noscroll:menuIsOpen,}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -55,17 +61,21 @@
       nemo aliquid pariatur quam voluptates animi laudantium, aperiam
       consectetur nobis enim.
     </p>
+   
     <dl>
-      <dt>Lorem.</dt>
-      <dd>Lorem ipsum dolor sit amet.</dd>
+      <dt aria-controls="main" 
+      @click="dd1 = ! dd1" class="accordeon" >Lorem. </dt>
+      <dd id="main" x-show="dd1">Lorem ipsum dolor sit amet.</dd>
     </dl>
     <dl>
-      <dt>Ipsum.</dt>
-      <dd>Magni temporibus voluptate excepturi necessitatibus!</dd>
+      <dt aria-controls="main1" 
+      @click="dd2 = ! dd2" class="accordeon">Ipsum.</dt>
+      <dd id="main1" x-show="dd2">Magni temporibus voluptate excepturi necessitatibus!</dd>
     </dl>
     <dl>
-      <dt>Facere.</dt>
-      <dd>Perspiciatis in harum id sit?</dd>
+      <dt aria-controls="main2" 
+      @click="dd3 = ! dd3" class="accordeon">Facere.</dt>
+      <dd id="main2" x-show="dd3">Perspiciatis in harum id sit?</dd>
     </dl>
   </body>
 </html>
