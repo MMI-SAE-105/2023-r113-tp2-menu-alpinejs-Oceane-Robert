@@ -4,6 +4,7 @@
     dd1 : false,
     dd2 : false,
     dd3 : false,
+    dd4 : false,
   }" 
   :class="{noscroll:menuIsOpen,}">
   <head>
@@ -11,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>Test menu</title>
+    <title>Animaux</title>
   </head>
   <body>
     <header>
@@ -20,60 +21,54 @@
       @click="menuIsOpen = ! menuIsOpen"
       class="header_menuBtn"
       >
-      menu
+      <img src="public/icones/IcBaselineMenu.svg" alt="menu" />
     </button>
-      <h1>Test de menu</h1>
-
-      <style>
-        .menu {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width:100v;
-          height: 20vh;
-          background: #fff;
-          display: grid;
-          place-content: center;
-        }
-        .header_menuBtn{
-          position: relative;
-          z-index: 10;
-        }
-        .noscroll,
-        .noscroll body{
-          overflow: hidden;
-        }
-      </style>
       <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
         <ul>
-          <li href="dogs/index.html">Chien</li>
-          <li href="cats/index.html">Chat</li>
+          <a href="dogs/index.html">Les chiens</a>
+            <ul>
+              <a href="cats/chat-1.html">chien 1</a>
+              <a href="cats/chat-2.html">chien 2</a>
+            </ul>
+          <a href="cats/index.html">Les chats</a>
+          <ul>
+            <a href="dogs/chien-1.html">chien 1</a>
+            <a href="dogs/chien-2.html">chien 2</a>
+          </ul>
         </ul>
       </nav>
     </header>
-    <!-- h2>lorem2^p>lorem -->
-    <h2>Lorem, ipsum.</h2>
+    <h2>Nos animaux de compagnie</h2>
     <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
-      mollitia adipisci alias error laboriosam numquam incidunt magni eum eos
-      nemo aliquid pariatur quam voluptates animi laudantium, aperiam
-      consectetur nobis enim.
+      Les chats et les chiens, compagnons de vie appréciés, offrent des expériences uniques aux amoureux des animaux. Les chats, avec leur élégance féline et leur indépendance, ajoutent une touche mystérieuse à nos foyers. Leurs ronronnements chaleureux et leur habileté à se faufiler dans les endroits les plus insolites les rendent irrésistibles. D'un autre côté, les chiens captivent par leur loyauté et leur énergie débordante. Leur amour inconditionnel et leur joie contagieuse enrichissent nos vies au quotidien. Les différentes races offrent une variété de tailles, de personnalités et de compétences, adaptées à une multitude de styles de vie. L'interaction entre ces deux espèces crée des moments tantôt ludiques, tantôt empreints d'une camaraderie silencieuse. Ensemble, chats et chiens apportent réconfort, compagnie et bonheur, enseignant aux humains des leçons de patience, d'amour et de joie de vivre. Ces précieux compagnons méritent toute l'affection et l'attention que nous pouvons leur offrir, enrichissant nos vies de manière inestimable.
     </p>
-   
     <dl>
       <dt aria-controls="main" 
-      @click="dd1 = ! dd1" class="accordeon" >Lorem. </dt>
-      <dd id="main" x-show="dd1">Lorem ipsum dolor sit amet.</dd>
+      @click="dd1 = ! dd1" class="accordeon" ><strong>Chat tigré </strong></dt>
+      <dd id="main" x-show="dd1">Les chats tigrés sont de véritables merveilles de la nature. Leurs robes striées évoquent la sauvagerie et la grâce à la fois. Avec leurs rayures distinctives, chaque chat tigré a une apparence unique et captivante. Leurs personnalités varient autant que leurs motifs, certains étant joueurs et espiègles, tandis que d'autres préfèrent observer le monde avec une curiosité tranquille. Qu'ils soient petits ou grands, les chats tigrés portent en eux un charme indéniable et une beauté sauvage qui les rendent irrésistibles.
+        <button><a href="cats/chat-1.html">en savoir plus </a></button>
+      </dd>
     </dl>
     <dl>
       <dt aria-controls="main1" 
-      @click="dd2 = ! dd2" class="accordeon">Ipsum.</dt>
-      <dd id="main1" x-show="dd2">Magni temporibus voluptate excepturi necessitatibus!</dd>
+      @click="dd2 = ! dd2" class="accordeon"><strong>Chat noir</strong></dt>
+      <dd id="main1" x-show="dd2">Les chats noirs sont une véritable incarnation de mystère et d'élégance. Leur pelage d'un noir profond ajoute à leur aura une touche envoûtante. Leur apparence souvent associée à la superstition et aux légendes leur confère un charme particulier. Ces félins arborent une beauté intemporelle et une élégance discrète. Leur personnalité varie autant que les nuances de leur pelage, certains étant doux et affectueux, d'autres affichant une indépendance assumée. Les chats noirs captivent par leur charisme et leur présence envoûtante, défiant les superstitions pour offrir à ceux qui les accueillent une compagnie pleine de charme et de mystère.
+      <button><a href="cats/chat-2.html">en savoir plus </a></button>
+    </dd>
     </dl>
     <dl>
       <dt aria-controls="main2" 
-      @click="dd3 = ! dd3" class="accordeon">Facere.</dt>
-      <dd id="main2" x-show="dd3">Perspiciatis in harum id sit?</dd>
+      @click="dd3 = ! dd3" class="accordeon"><strong>Berger allemands</strong></dt>
+      <dd id="main2" x-show="dd3">Perspiciatis in harum id sit?
+        <button><a href="dogs/chien-1.html">en savoir plus </a></button>
+      </dd>
+    </dl>
+    <dl>
+      <dt aria-controls="main1" 
+      @click="dd4 = ! dd4" class="accordeon"><strong>Husky</strong></dt>
+      <dd id="main1" x-show="dd4">Magni temporibus voluptate excepturi necessitatibus!
+        <button><a href="dogs/chien-2.html">en savoir plus </a></button>
+      </dd>
     </dl>
   </body>
 </html>
