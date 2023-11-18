@@ -23,20 +23,25 @@
       >
       <img src="public/icones/IcBaselineMenu.svg" alt="menu" />
     </button>
-      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-        <ul>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+      <ul>
+        <li><a href="index.html">Accueil</a></li> 
+        <li>
           <a href="dogs/index.html">Les chiens</a>
-            <ul>
-              <a href="cats/chat-1.html">chien 1</a>
-              <a href="cats/chat-2.html">chien 2</a>
-            </ul>
+          <ul>
+            <li><a href="dogs/chien-1.html">chien 1</a></li>
+            <li><a href="dogs/chien-2.html">chien 2</a></li>
+          </ul>
+        </li>
+        <li>
           <a href="cats/index.html">Les chats</a>
           <ul>
-            <a href="dogs/chien-1.html">chien 1</a>
-            <a href="dogs/chien-2.html">chien 2</a>
+            <li><a href="cats/chat-1.html">chat 1</a></li>
+            <li><a href="cats/chat-2.html">chat 2</a></li>
           </ul>
-        </ul>
-      </nav>
+        </li>
+      </ul>
+    </nav>
     </header>
     <h2>Nos animaux de compagnie</h2>
     <p>
@@ -59,7 +64,7 @@
     <dl>
       <dt aria-controls="main2" 
       @click="dd3 = ! dd3" class="accordeon"><strong>Berger allemands</strong></dt>
-      <dd id="main2" x-show="dd3">Perspiciatis in harum id sit?
+      <dd id="main2" x-show="dd3">Les bergers allemands sont une incarnation de loyauté et d'intelligence. Leur allure majestueuse et leur pelage épais évoquent à la fois force et grâce. Ces chiens sont réputés pour leur dévouement envers leur famille et leur nature protectrice. Leur intelligence vive et leur capacité d'apprentissage font d'eux d'excellents compagnons polyvalents, que ce soit comme chiens de travail, de garde ou de compagnie. Chaque berger allemand possède son propre caractère, mais la plupart partagent des traits communs tels que la loyauté inébranlable envers leurs proches, leur courage indéniable et leur volonté de protéger ceux qu'ils aiment. Leur énergie débordante les rend toujours prêts à participer à diverses activités, que ce soit pour jouer, pour travailler ou simplement pour être aux côtés de leur famille. Avec leur charisme naturel et leur dévotion sans faille, les bergers allemands continuent d'être des compagnons extraordinaires, offrant une présence réconfortante et protectrice à ceux qui ont le privilège de les avoir à leurs côtés.
         <button><a href="dogs/chien-1.html">en savoir plus </a></button>
       </dd>
     </dl>
