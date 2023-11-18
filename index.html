@@ -10,11 +10,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Test menu</title>
   </head>
   <body>
-    <!-- https://emmet.io/ -->
-    <!-- header>h1{Test de menu} -->
     <header>
       <button 
       aria-controls="mainNav" 
@@ -47,9 +46,8 @@
       </style>
       <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
         <ul>
-          <li href="#">item 1</li>
-          <li href="#">item 2</li>
-          <li href="#">item 3</li>
+          <li href="dogs/index.html">Chien</li>
+          <li href="cats/index.html">Chat</li>
         </ul>
       </nav>
     </header>
