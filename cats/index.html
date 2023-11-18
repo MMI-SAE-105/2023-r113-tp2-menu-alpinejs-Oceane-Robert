@@ -1,16 +1,49 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page des chats</title>
-</head>
-<body>
-  <h1>Liste des chats</h1>
-  <ul>
-    <li>Miaou</li>
-    <li>Ronron</li>
-    <li>Félix</li>
-  </ul>
-</body>
+<html lang="fr" x-data="{
+    menuIsOpen: false, 
+    dd1 : false,
+    dd2 : false,
+    dd3 : false,
+    dd4 : false,
+  }" 
+  :class="{noscroll:menuIsOpen,}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Animaux</title>
+  </head>
+  <body>
+    <header>
+      <button 
+      aria-controls="mainNav" 
+      @click="menuIsOpen = ! menuIsOpen"
+      class="header_menuBtn"
+      >
+      <img src="public/icones/IcBaselineMenu.svg" alt="menu" />
+    </button>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+      <ul>
+        <li><a href="../index.html">Accueil</a></li> 
+        <li>
+          <a href="dogs/index.html">Les chiens</a>
+          <ul>
+            <li><a href="dogs/chien-1.html">chien 1</a></li>
+            <li><a href="dogs/chien-2.html">chien 2</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="cats/index.html">Les chats</a>
+          <ul>
+            <li><a href="cats/chat-1.html">chat 1</a></li>
+            <li><a href="cats/chat-2.html">chat 2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    </header>
+    <h2>Les chiens</h2>
+    
+  </body>
 </html>
